@@ -1,3 +1,7 @@
+/*Se consideră un set de N studenţi. 
+Să se grupeze studenţii în grupuri de câte 5, şi să se afişeze pentru fiecare grupă toate permutările posibile. 
+*/
+
 #include <iostream>
 #include <cstring>
 
