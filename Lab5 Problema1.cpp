@@ -1,5 +1,15 @@
 ﻿// Problema1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
+/*1. Să se realizeze un program interactiv care implementează metodele de sortare avansate prezentate în această lucrare. 
+Programul va prezenta următorul meniu: 
+- C - iniţializează tabloul de sortat cu valori generate aleator 
+- V - vizualizează tablou 
+- R - reiniţializează tabloul: 
+- S - sortare shellsort 
+- H - sortare heapsort 
+- Q- sortare quicksort 
+- X - părăsirea programului. 
+*/Pentru acelaşi tablou iniţial se vor evalua şi compara timpii de execuţie a diferitelor metode de sortare. 
 
 #include <iostream>
 #include <random>
@@ -7,7 +17,7 @@
 
 using namespace std;
 
-int a[1000], copie[1000], n;
+int a[1000], copy[1000], n;
 clock_t start, stop;
 
 void menu() {
@@ -20,14 +30,14 @@ void menu() {
     cout << "X - parasirea programului." << endl;
 }
 
-void afisare() {
+void display() {
     for (int i = 0; i < n; i++) {
         cout << a[i] << ' ';
     }
     cout << endl;
 }
 
-void generare() {
+void generate() {
     srand(time(0));
     for (int i = 0; i < n; i++) {
         a[i] = rand() % 100;
@@ -35,7 +45,7 @@ void generare() {
 
 }
 
-void gen_copie() {
+void gen_copy() {
     for (int i = 0; i < n; i++) {
         copie[i] = a[i];
     }
@@ -43,7 +53,7 @@ void gen_copie() {
 
 void reset() {
     for (int i = 0; i < n; i++)
-        a[i] = copie[i];
+        a[i] = copy[i];
 }
 
 int shellsort(){
@@ -115,44 +125,44 @@ void QuickSort(int a[], int st, int dr)
 int main()
 {
     int x = 1;
-    char alegere;
+    char choice;
     cout << "Introduceti cate numere aleatoare doriti sa sortati: ";
     cin >> n;
     while (x) {
         menu();
         cout << "Alegerea voastra este: ";
-        cin >> alegere;
-        switch (alegere) {
+        cin >> choice;
+        switch (choice) {
         case 'C':
-            generare();
-            afisare();
-            gen_copie();
+            generate();
+            display();
+            gen_copy();
             break;
         case 'V':
-            afisare();
+            display();
             break;
         case 'R':
             reset();
-            afisare();
+            display();
             break;
         case 'S':
             start = clock();
             shellsort();
-            afisare();
+            display();
             stop = clock();
             cout << "\n\nPentru  shellsort dureaza:  " << ((float)(stop - start)) / CLOCKS_PER_SEC;
             break;
         case 'H':
             start = clock();
             heapSort();
-            afisare();
+            display();
             stop = clock();
             cout << "\n\nPentru heapsort dureaza:  " << ((float)(stop - start)) / CLOCKS_PER_SEC;
             break;
         case 'Q':
             start = clock();
             QuickSort(a, 0, n);
-            afisare();
+            display();
             stop = clock();
             cout << "\n\nPentru quicksort dureaza:  " << ((float)(stop - start)) / CLOCKS_PER_SEC;
             break;
