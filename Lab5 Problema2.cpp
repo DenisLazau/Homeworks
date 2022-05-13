@@ -1,3 +1,8 @@
+/*2. Se consideră un vector de n numere. Să se  sorteze în ordine crescătoare elementele de pe pozițiile  pare,
+folosind algoritmul  shellsort, şi elementele de  pe poziţiile impare  în  ordine descrescătoare folosind algorimul heapsort. 
+Să se  afişeze vectorul în noua formă. 
+*/
+
 #include <iostream>
 #include <random>
 
