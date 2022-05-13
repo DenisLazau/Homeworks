@@ -1,3 +1,6 @@
+/*Se consideră un set de N caractere. Să se afişeze toate combinaţiile de N luate câte M ale acestor caractere. 
+*/
+
 #include <iostream>
 
 using namespace std;
