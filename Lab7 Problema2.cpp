@@ -1,3 +1,7 @@
+/*Pentru   problema clasică de determinare a tuturor   soluţiilor de ieşire  dintr-un labirint, prezentată în cadrul acestei lucrări. 
+Să  se  scrie programul de aflare a optimului (drumul  cel  mai scurt de iesire)
+*/
+
 #include <iostream> 
 #include <stdio.h>    
 #include <stdlib.h> 
