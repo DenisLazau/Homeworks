@@ -1,3 +1,9 @@
+/*Se  consideră  un  set  de  n  abonați  la  un  serviciu  de  telefonie.  
+Fiecare  abonat  va  fi caracterizat prin nume, adresa, număr telefon şi valoare factură. 
+Să se sorteze descrescator abonaţii după valoarea facturii de telefon folosind algoritmul de sortare quicksort, 
+şi apoi să se afişeze primii trei abonați cu cele mai mari facturi. 
+*/
+
 #include <iostream>
 #include <cstring>
 
